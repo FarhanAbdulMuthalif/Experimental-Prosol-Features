@@ -1,0 +1,95 @@
+.config-dialog-grid-section-wrapper {
+  height: 70vh;
+  width: 99%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(74, 74, 234, 0.146);
+  box-shadow: 3px 3px 3px rgba(74, 74, 234, 0.146), -5px -5px 5px #ffffff;
+  border-radius: 5px;
+  .without-height-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+    .vdr-cd-logis-div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      p {
+        font-weight: 500;
+        text-align: start;
+        color: #6f6f6f;
+        font-size: 14px;
+      }
+      .vdr-cd-logis-div-heading {
+        font-weight: bold;
+        padding: 0 0 10px 0;
+        text-transform: uppercase;
+      }
+      .label-select-div {
+        display: flex;
+        width: 100%;
+        padding: 4px 0;
+        align-items: center;
+        p {
+          font-size: 12px;
+        }
+        .label-select-div-report-field {
+          color: #4c4b4b;
+          // margin-right: 3px;
+          width: 35%;
+        }
+        .label-select-div-report-text {
+          font-weight: bold;
+          color: #6f6f6f;
+          width: 65%;
+          text-align: start;
+        }
+      }
+    }
+  }
+  .label-select-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    // border-radius: 5px;
+    padding: 0 5px;
+    p {
+      font-weight: 500;
+      text-align: start;
+    }
+    .label-select-section-report-field {
+      color: #4c4b4b;
+      margin-right: 3px;
+      width: 35%;
+    }
+    .label-select-section-report-text {
+      font-size: 12px;
+      font-weight: bold;
+      color: #6f6f6f;
+      width: 65%;
+      text-align: start;
+    }
+  }
+  // color: #4c4b4bcb;
+  .config-dialog-grid-section-header-img-txt-div {
+    width: 100%;
+    height: 30%;
+    background-color: #f6f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .config-dialog-grid-section-header-nun-mdfr-text {
+      width: 60%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+  }
+}

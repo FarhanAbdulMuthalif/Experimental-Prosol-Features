@@ -1,0 +1,47 @@
+// components/FileUpload.module.scss
+.file-upload {
+  border: 1px dashed rgb(128, 128, 255);
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  position: relative;
+
+  &:hover {
+    border-color: #444;
+  }
+  .Sin-file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+  }
+  .upload-label {
+    font-size: 4px;
+    color: #84adee;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .preview-container {
+    position: relative;
+    display: flex;
+
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    .sinImg {
+      object-fit: cover;
+      justify-self: center;
+    }
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
