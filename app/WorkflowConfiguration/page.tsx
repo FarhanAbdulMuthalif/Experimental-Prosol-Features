@@ -1,40 +1,26 @@
 "use client";
-import {
-  useCallback,
-  useMemo,
-  useState,
-  useRef,
-  useEffect,
-  createContext,
-} from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ReactFlow, {
-  useNodesState,
-  MarkerType,
-  Panel,
-  OnConnect,
-  ReactFlowInstance,
-  ReactFlowProvider,
-  Controls,
   Background,
   BackgroundVariant,
   ConnectionMode,
-  Node,
+  Controls,
   Edge,
+  MarkerType,
+  Node,
+  OnConnect,
+  Panel,
+  ReactFlowInstance,
+  ReactFlowProvider,
+  useNodesState,
 } from "reactflow";
 
 import "reactflow/dist/style.css";
-import "./style.scss";
-import CustomEdge from "./components/FloatingEdge";
 import CustomNode from "./components/CustomNode";
-type ComplexObject = {
-  incoming: string[];
-  outgoing: string[];
-};
+import CustomEdge from "./components/FloatingEdge";
+import { FlowContext } from "./components/FlowContext";
+import "./style.scss";
 
-export const FlowContext = createContext<ComplexObject>({
-  incoming: [],
-  outgoing: [],
-});
 export default function WorkflowConfiguration() {
   // The context is created with `| null` in the type, to accurately reflect the default value.
   const [edges, setEdges] = useState<Edge[]>([]);

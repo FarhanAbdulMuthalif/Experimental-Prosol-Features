@@ -1,39 +1,39 @@
+import { DynamicFormsProps, PostCreateFieldData } from "@/MOCK_DATA";
+import api from "@/app/components/api";
+import CloseIcon from "@mui/icons-material/Close";
 import {
-  Button,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Tabs,
-  Tab,
-  TextField,
-  Select,
-  MenuItem,
-  FormGroup,
-  FormControlLabel,
-  Checkbox,
-  RadioGroup,
-  Radio,
-  Typography,
-  IconButton,
-  Chip,
   Avatar,
-  SelectChangeEvent,
+  Button,
   Card,
   CardHeader,
+  Checkbox,
+  Chip,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   Divider,
+  FormControlLabel,
+  FormGroup,
+  Grid,
+  IconButton,
   List,
-  ListItemText,
   ListItem,
   ListItemIcon,
-  Grid,
+  ListItemText,
+  MenuItem,
+  Radio,
+  RadioGroup,
+  Select,
+  SelectChangeEvent,
+  Tab,
+  Tabs,
+  TextField,
+  Typography,
 } from "@mui/material";
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 import "./FlowCongigDialog.scss";
-import { FlowContext } from "../page";
-import CloseIcon from "@mui/icons-material/Close";
-import { DynamicFormsProps, PostCreateFieldData } from "@/MOCK_DATA";
-import api from "@/app/components/api";
+import { FlowContext } from "./FlowContext";
 
 interface DialogProps {
   open: boolean;

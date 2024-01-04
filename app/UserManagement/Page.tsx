@@ -1,30 +1,30 @@
 "use client";
-import { useState, FormEvent, ChangeEvent, useMemo } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import SearchIcon from "@mui/icons-material/Search";
 import {
-  MenuItem,
   Button,
-  Select,
   Drawer,
-  ListSubheader,
-  TextField,
-  IconButton,
-  Paper,
-  Switch,
   FormControl,
   FormHelperText,
+  IconButton,
+  ListSubheader,
+  MenuItem,
+  Paper,
+  Select,
   SelectChangeEvent,
+  Switch,
+  TextField,
 } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import InputLabel from "@mui/material/InputLabel";
 import { styled } from "@mui/material/styles";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { ChangeEvent, FormEvent, useMemo, useState } from "react";
 import data from "../../data.json";
 import { ImportColumns } from "../components/TableSource";
 import "./style.scss";
-import SearchIcon from "@mui/icons-material/Search";
-import InputLabel from "@mui/material/InputLabel";
-import CloseIcon from "@mui/icons-material/Close";
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -208,19 +208,19 @@ export default function UserManagement(props: Props) {
     setFormErrors(validate(formValues));
   };
   const [searchText, setSearchText] = useState("");
-  const menuDataList = [
-    "chennai",
-    "mumbai",
-    "kolkatta",
-    "Delhi",
-    "Assam",
-    "Kerala",
-    "Karnataka",
-  ];
+  
   const containsText = (text: string, searchText: string) =>
     text.toLowerCase().indexOf(searchText.toLowerCase()) > -1;
   const displayedOptions = useMemo(
-    () => menuDataList.filter((option) => containsText(option, searchText)),
+    () => [
+      "chennai",
+      "mumbai",
+      "kolkatta",
+      "Delhi",
+      "Assam",
+      "Kerala",
+      "Karnataka",
+    ].filter((option) => containsText(option, searchText)),
     [searchText]
   );
   const { window, handleDrawerToggle, mobileOpen } = props;
